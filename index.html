@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MULTI VENTAS - Tienda en Línea</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome (Iconos) CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- BARRA SUPERIOR / ENCABEZADO PRINCIPAL -->
+    <header class="bg-light border-bottom py-2">
+        <div class="container-fluid px-4">
+            <div class="row align-items-center">
+                <!-- LOGO -->
+                <div class="col-md-3 col-6">
+                    <a href="index.html" class="text-decoration-none">
+                        <div class="logo-box">
+                            <span class="bg-warning text-dark fw-bold px-2 py-1 fs-4">MULTI</span>
+                            <span class="bg-dark text-white fw-bold px-2 py-1 fs-4">VENTAS</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- BUSCADOR -->
+                <div class="col-md-6 d-none d-md-block">
+                    <form class="d-flex">
+                        <input class="form-control me-0 rounded-0 rounded-start" type="search" placeholder="Search for products" aria-label="Search">
+                        <button class="btn btn-warning rounded-0 rounded-end px-3" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- SERVICIO AL CLIENTE Y ICONOS -->
+                <div class="col-md-3 col-6 text-end">
+                    <div class="d-inline-block me-3 text-start d-none d-lg-inline-block">
+                        <small class="text-muted d-block" style="font-size: 11px;">Servicio al cliente</small>
+                        <strong class="fs-6">+52 9616112345</strong>
+                    </div>
+                    <a href="#" class="text-dark me-2 fs-5"><i class="far fa-heart"></i></a>
+                    <a href="#" class="text-dark fs-5 position-relative">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark" style="font-size: 10px;">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- NAVEGACIÓN PRINCIPAL -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-0">
+        <div class="container-fluid px-4">
+            <!-- BOTÓN CATEGORÍAS -->
+            <div class="dropdown">
+                <button class="btn btn-warning dropdown-toggle fw-bold py-3 px-4 rounded-0" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-bars me-2"></i> Categorias
+                </button>
+                <ul class="dropdown-menu rounded-0 m-0 shadow" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Ropa</a></li>
+                    <li><a class="dropdown-item" href="#">Electrónica</a></li>
+                    <li><a class="dropdown-item" href="#">Calzado</a></li>
+                    <li><a class="dropdown-item" href="#">Belleza</a></li>
+                </ul>
+            </div>
+
+            <button class="navbar-toggler my-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active px-3" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#">Tienda</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#">Galeria</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BANNER PRINCIPAL / HERO CARRUSEL + OFERTAS -->
+    <section class="py-4 bg-light">
+        <div class="container-fluid px-4">
+            <div class="row g-3">
+                <!-- CARRUSEL SLIDER -->
+                <div class="col-lg-8">
+                    <div id="heroCarousel" class="carousel slide shadow-sm position-relative" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="Img/carrusel-2.jpg" class="d-block w-100 hero-img" alt="Moda Femenina">
+                                <div class="carousel-caption d-none d-md-block text-start bg-dark bg-opacity-50 p-4 rounded">
+                                    <h2 class="display-5 fw-bold text-white">Moda Femenina</h2>
+                                    <p>Descubre la elegancia y distinción que definen tu estilo en cada ocasión.</p>
+                                    <a href="#" class="btn btn-outline-light px-4 py-2">Comprar</a>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Img/carrusel-1.jpg" class="d-block w-100 hero-img" alt="Moda Masculina">
+                                <div class="carousel-caption d-none d-md-block text-start bg-dark bg-opacity-50 p-4 rounded">
+                                    <h2 class="display-5 fw-bold text-white">Moda Masculina</h2>
+                                    <p>Descubre las mejores tendencias en ropa y accesorios para caballero.</p>
+                                    <a href="#" class="btn btn-outline-light px-4 py-2">Comprar</a>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Img/carrusel-3.jpg" class="d-block w-100 hero-img" alt="Moda Infantil">
+                                <div class="carousel-caption d-none d-md-block text-start bg-dark bg-opacity-50 p-4 rounded">
+                                    <h2 class="display-5 fw-bold text-white">Moda Infantil</h2>
+                                    <p>Estilo y comodidad para los más pequeños del hogar.</p>
+                                    <a href="#" class="btn btn-outline-light px-4 py-2">Comprar</a>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- BANNERS DE OFERTAS LATERALES -->
+                <div class="col-lg-4 d-flex flex-column justify-content-between gap-3">
+                    <div class="offer-card position-relative overflow-hidden shadow-sm flex-fill">
+                        <img src="Img/oferta-1.jpg" class="w-100 h-100 object-fit-cover" alt="Oferta 1">
+                        <div class="offer-overlay p-4 d-flex flex-column justify-content-center align-items-center text-center text-white">
+                            <span class="text-uppercase fw-bold text-warning mb-1">AHORRA 20%</span>
+                            <h3 class="fw-bold fs-4">Ofertas de temporada</h3>
+                            <a href="#" class="btn btn-warning fw-bold px-4 mt-2">Comprar</a>
+                        </div>
+                    </div>
+                    <div class="offer-card position-relative overflow-hidden shadow-sm flex-fill">
+                        <img src="Img/oferta-2.jpg" class="w-100 h-100 object-fit-cover" alt="Oferta 2">
+                        <div class="offer-overlay p-4 d-flex flex-column justify-content-center align-items-center text-center text-white">
+                            <span class="text-uppercase fw-bold text-warning mb-1">AHORRA 30%</span>
+                            <h3 class="fw-bold fs-4">Ofertas especiales</h3>
+                            <a href="#" class="btn btn-warning fw-bold px-4 mt-2">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VENTAJAS / SERVICIOS -->
+    <section class="py-4 bg-white border-top border-bottom">
+        <div class="container-fluid px-4">
+            <div class="row g-4 text-center">
+                <div class="col-md-3 col-sm-6">
+                    <div class="d-flex align-items-center justify-content-center gap-3">
+                        <i class="fas fa-check text-warning fs-2"></i>
+                        <span class="fw-bold text-secondary">Mejora calidad</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="d-flex align-items-center justify-content-center gap-3">
+                        <i class="fas fa-shipping-fast text-warning fs-2"></i>
+                        <span class="fw-bold text-secondary">Envío gratis</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="d-flex align-items-center justify-content-center gap-3">
+                        <i class="fas fa-exchange-alt text-warning fs-2"></i>
+                        <span class="fw-bold text-secondary">Devolución de 30 días</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="d-flex align-items-center justify-content-center gap-3">
+                        <i class="fas fa-phone-volume text-warning fs-2"></i>
+                        <span class="fw-bold text-secondary">Soporte 24/7</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATEGORÍAS -->
+    <section class="py-5">
+        <div class="container-fluid px-4">
+            <h2 class="section-title text-uppercase fw-bold mb-4">CATEGORÍAS</h2>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="bg-white p-3 shadow-sm d-flex align-items-center gap-3 category-card">
+                        <img src="Img/cat-1.jpg" alt="Ropa" class="cat-img">
+                        <div>
+                            <h5 class="fw-bold mb-1">Ropa</h5>
+                            <small class="text-muted">100 Productos</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="bg-white p-3 shadow-sm d-flex align-items-center gap-3 category-card">
+                        <img src="Img/cat-2.jpg" alt="Electrónica" class="cat-img">
+                        <div>
+                            <h5 class="fw-bold mb-1">Electrónica</h5>
+                            <small class="text-muted">100 Productos</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="bg-white p-3 shadow-sm d-flex align-items-center gap-3 category-card">
+                        <img src="Img/cat-3.jpg" alt="Calzado" class="cat-img">
+                        <div>
+                            <h5 class="fw-bold mb-1">Calzado</h5>
+                            <small class="text-muted">100 Productos</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="bg-white p-3 shadow-sm d-flex align-items-center gap-3 category-card">
+                        <img src="Img/cat-4.jpg" alt="Belleza" class="cat-img">
+                        <div>
+                            <h5 class="fw-bold mb-1">Belleza</h5>
+                            <small class="text-muted">100 Productos</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTOS DESTACADOS -->
+    <section class="py-5 bg-light">
+        <div class="container-fluid px-4">
+            <h2 class="section-title text-uppercase fw-bold mb-4">PRODUCTOS DESTACADO</h2>
+            <div class="row g-4">
+                <!-- PRODUCTO 1 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm text-center product-card">
+                        <div class="p-3 bg-white">
+                            <img src="Img/product-1.jpg" class="card-img-top product-img" alt="Cámara fotográfica Canon">
+                        </div>
+                        <div class="card-body bg-white">
+                            <h6 class="card-title fw-bold">Cámara fotográfica Canon</h6>
+                            <div class="my-2">
+                                <span class="fw-bold fs-5 text-dark">$12,500.00</span>
+                                <small class="text-muted text-decoration-line-through ms-2">$15,000.00</small>
+                            </div>
+                            <div class="text-warning small">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="text-muted ms-1">(99)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCTO 2 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm text-center product-card">
+                        <div class="p-3 bg-white">
+                            <img src="Img/product-2.jpg" class="card-img-top product-img" alt="Blusa azul">
+                        </div>
+                        <div class="card-body bg-white">
+                            <h6 class="card-title fw-bold">Blusa azul</h6>
+                            <div class="my-2">
+                                <span class="fw-bold fs-5 text-dark">$250.00</span>
+                                <small class="text-muted text-decoration-line-through ms-2">$400.00</small>
+                            </div>
+                            <div class="text-warning small">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="text-muted ms-1">(99)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCTO 3 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm text-center product-card">
+                        <div class="p-3 bg-white">
+                            <img src="Img/product-3.jpg" class="card-img-top product-img" alt="Lámpara de mesa">
+                        </div>
+                        <div class="card-body bg-white">
+                            <h6 class="card-title fw-bold">Lámpara de mesa</h6>
+                            <div class="my-2">
+                                <span class="fw-bold fs-5 text-dark">$1,250.00</span>
+                                <small class="text-muted text-decoration-line-through ms-2">$2,300.00</small>
+                            </div>
+                            <div class="text-warning small">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="text-muted ms-1">(99)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCTO 4 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm text-center product-card">
+                        <div class="p-3 bg-white">
+                            <img src="Img/product-4.jpg" class="card-img-top product-img" alt="Tenis Nike">
+                        </div>
+                        <div class="card-body bg-white">
+                            <h6 class="card-title fw-bold">Tenis Nike</h6>
+                            <div class="my-2">
+                                <span class="fw-bold fs-5 text-dark">$799.00</span>
+                                <small class="text-muted text-decoration-line-through ms-2">$999.00</small>
+                            </div>
+                            <div class="text-warning small">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="text-muted ms-1">(99)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER / PIE DE PÁGINA -->
+    <footer class="bg-dark text-white-50 pt-5 pb-3">
+        <div class="container-fluid px-4">
+            <div class="row g-4">
+                <!-- CONTÁCTANOS -->
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-white text-uppercase fw-bold mb-3 fs-6">CONTÁCTANOS</h5>
+                    <p class="small mb-2">Ubica nuestra tienda física en</p>
+                    <p class="small mb-2"><i class="fas fa-map-marker-alt text-warning me-2"></i> Av. central No. 123</p>
+                    <p class="small mb-2"><i class="fas fa-envelope text-warning me-2"></i> info@tienda.com</p>
+                    <p class="small mb-2"><i class="fas fa-phone text-warning me-2"></i> +52 961 61 12345</p>
+                </div>
+
+                <!-- MENÚ -->
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-white text-uppercase fw-bold mb-3 fs-6">MENÚ</h5>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none"><i class="fas fa-angle-right me-2"></i>Home</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none"><i class="fas fa-angle-right me-2"></i>Tienda</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none"><i class="fas fa-angle-right me-2"></i>Galería</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none"><i class="fas fa-angle-right me-2"></i>Nosotros</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none"><i class="fas fa-angle-right me-2"></i>Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- REDES SOCIALES -->
+                <div class="col-lg-4 col-md-12">
+                    <h5 class="text-white text-uppercase fw-bold mb-3 fs-6">NUESTRAS REDES SOCIALES</h5>
+                    <div class="d-flex gap-2">
+                        <a href="#" class="btn btn-warning rounded-0"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="btn btn-warning rounded-0"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="btn btn-warning rounded-0"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="btn btn-warning rounded-0"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-secondary my-4">
+
+            <div class="row">
+                <div class="col-12 text-center text-md-start small">
+                    <p class="mb-0">&copy; <span class="text-warning">Domain</span>. Todos los derechos reservados. Diseñado por ti.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+   <!-- Bootstrap JS Bundle (Incluye Popper.js y la lógica del Carousel) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script de inicialización para forzar el movimiento automático -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var miCarrusel = document.querySelector('#heroCarousel');
+        if (miCarrusel) {
+          var carousel = new bootstrap.Carousel(miCarrusel, {
+            interval: 3000,  /* Cambia de imagen cada 3 segundos */
+            ride: 'carousel',
+            touch: true      /* Permite deslizar en celulares */
+          });
+        }
+      });
+    </script>
+</body>
+</html>

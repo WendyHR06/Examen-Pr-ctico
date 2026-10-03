@@ -1,0 +1,96 @@
+/* ESTILOS GENERALES Y FUENTE */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333333;
+    background-color: #f8f9fa;
+}
+
+/* LOGO */
+.logo-box {
+    display: inline-flex;
+    align-items: center;
+}
+
+/* HERO CARRUSEL Y BANNERS */
+.hero-img {
+    height: 410px;
+    object-fit: cover;
+}
+
+.offer-card {
+    height: 195px;
+}
+
+.offer-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    transition: background 0.3s ease;
+}
+
+.offer-card:hover .offer-overlay {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* LÍNEAS TÍTULOS DE SECCIÓN */
+.section-title {
+    position: relative;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.section-title::after {
+    content: "";
+    display: inline-block;
+    width: 100px;
+    height: 2px;
+    background-color: #ffc107;
+    margin-left: 15px;
+    vertical-align: middle;
+}
+
+/* CARDS CATEGORÍAS */
+.category-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.category-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+.cat-img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+/* CARDS PRODUCTOS */
+.product-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+.product-img {
+    height: 180px;
+    object-fit: contain;
+}
+
+/* AJUSTES RESPONSIVOS */
+@media (max-width: 991px) {
+    .hero-img {
+        height: 300px;
+    }
+    
+    .offer-card {
+        height: 160px;
+    }
+}
